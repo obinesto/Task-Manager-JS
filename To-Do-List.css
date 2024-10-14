@@ -1,0 +1,29 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+#task-input{
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+#add-task{
+    background-color: #4CAF50;
+    color: #ffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#task-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#task-list li{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+#task-list li:last-child{
+border-bottom: none;
+}
