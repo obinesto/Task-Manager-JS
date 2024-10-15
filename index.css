@@ -1,29 +1,111 @@
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 20px;
 }
-#task-input{
-    width: 50%;
+
+.task-creation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#task-input, #task-deadline, #task-priority {
     padding: 10px;
     margin-bottom: 20px;
+    width: 20%;
 }
-#add-task{
+
+#add-task {
     background-color: #4CAF50;
-    color: #ffff;
+    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 15px;
 }
-#task-list{
+
+#clear-tasks {
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+#filter-completed, #filter-incomplete {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+#task-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-#task-list li{
+
+#task-list li {
     padding: 10px;
     border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
 }
-#task-list li:last-child{
-border-bottom: none;
+
+#edit-button{
+    background-color: #000;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#toggle-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#remove-button {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Media Query */
+@media screen and (max-width: 600px) {
+    .task-creation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #task-input, #task-deadline, #task-priority {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #add-task, #clear-tasks, #filter-completed, #filter-incomplete {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #task-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #task-list button {
+        margin-top: 10px;
+    }
 }

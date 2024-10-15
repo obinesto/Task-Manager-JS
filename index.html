@@ -3,16 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do-List</title>
+    <title>Task Manager</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-<h1>To-Do-List</h1>
-<input type="text" id="task-input" placeholder="Add A Task">
-<button id="add-task">Add Task</button>
-<ul id="task-list"></ul>
+<h1>Task Manager</h1>
 
+<div class="task-creation">
+    <input type="text" id="task-input" placeholder="Add a task" aria-label="Task input">
+    <input type="date" id="task-deadline" placeholder="Add deadline" aria-label="Task deadline">
+    <label for="task-priority">Priority:</label>
+    <select id="task-priority" aria-label="Task priority">
+        <option value="Low">Low Priority</option>
+        <option value="Medium">Medium Priority</option>
+        <option value="High">High Priority</option>
+    </select>
+    <button type="button" id="add-task">Add Task</button>
+</div>
+
+<div>
+    <button type="button" id="filter-completed">Show Completed Tasks</button>
+    <button type="button" id="filter-incomplete">Show Incomplete Tasks</button>
+</div>
+
+<div id="task-list-container">
+    <ul id="task-list"></ul>
+</div>
+
+<div>
+    <button type="button" id="clear-tasks">Clear All Tasks</button>
+</div>
 
 <script src="index.js"></script>
 
