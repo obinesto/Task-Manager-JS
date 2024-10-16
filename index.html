@@ -1,43 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task Manager</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" href="assets/46cd20a33efe24abce136ee09cea122a.png" type="png">
-</head>
-<body>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/46cd20a33efe24abce136ee09cea122a.png"
+      type="png"
+    />
+  </head>
+  <body>
+    <h1>Task Manager</h1>
 
-<h1>Task Manager</h1>
-
-<div class="task-creation">
-    <input type="text" id="task-input" placeholder="Add a task" aria-label="Task input">
-    <label for="task-deadline">Deadline:</label>
-    <input type="date" id="task-deadline" placeholder="Add deadline" aria-label="Task deadline">
-    <label for="task-priority">Priority:</label>
-    <select id="task-priority" aria-label="Task priority">
+    <div class="task-creation">
+      <input
+        type="text"
+        id="task-input"
+        placeholder="Add a task"
+        aria-label="Task input"
+      />
+      <label for="task-deadline">Deadline:</label>
+      <input
+        type="date"
+        id="task-deadline"
+        placeholder="Add deadline"
+        aria-label="Task deadline"
+      />
+      <label for="task-priority">Priority:</label>
+      <select id="task-priority" aria-label="Task priority">
         <option value="Low">Low Priority</option>
         <option value="Medium">Medium Priority</option>
         <option value="High">High Priority</option>
-    </select>
-    <button type="button" id="add-task">Add Task</button>
-</div>
+      </select>
+      <button type="button" id="add-task">Add Task</button>
+    </div>
 
-<div>
-    <button type="button" id="filter-completed">Show Completed Tasks</button>
-    <button type="button" id="filter-incomplete">Show Incomplete Tasks</button>
-</div>
+    <div>
+      <button type="button" id="filter-completed">Show Completed Tasks</button>
+      <button type="button" id="filter-incomplete">
+        Show Incomplete Tasks
+      </button>
+    </div>
 
-<div id="task-list-container">
-    <ul id="task-list"></ul>
-</div>
+    <div id="task-list-container">
+      <ul id="task-list"></ul>
+    </div>
 
-<div>
-    <button type="button" id="clear-tasks">Clear All Tasks</button>
-</div>
+    <div>
+      <button type="button" id="view-all-tasks" onclick="viewAllTasks()">View All Tasks</button>
+    </div>
 
-<script src="index.js"></script>
+    <div>
+      <button type="button" id="clear-tasks">Clear All Tasks</button>
+    </div>
 
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>

@@ -102,4 +102,11 @@ clearAllButton.addEventListener("click", () => {
     viewTasks();
 });
 
+function viewAllTasks() {
+    if (taskArray.length === 0) {
+        alert("No tasks to display");
+    } else {
+    viewTasks();
+}};
+
 viewTasks();
